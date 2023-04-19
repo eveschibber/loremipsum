@@ -274,7 +274,7 @@ header {
      float: left;
      width: 120px;
      height: 100%;
-     background: #0808ff;
+     background: #42a4c2;
      border-right: #fff solid 7px;
      padding: 33px;
      position: absolute;
@@ -316,7 +316,7 @@ header {
 }
 
 #dismiss:hover {
-     background: #0808ff;
+     background: #42a4c2;
      color: #fff;
 }
 
@@ -344,7 +344,7 @@ header {
 
 #sidebar .sidebar-header {
      padding: 20px;
-     background: #0808ff;
+     background: #42a4c2;
 }
 
 #sidebar ul.components {
@@ -365,13 +365,13 @@ header {
 
 #sidebar ul li a:hover {
      color: #fff;
-     background: #0808ff;
+     background: #42a4c2;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
      color: #fff;
-     background: #0808ff;
+     background: #42a4c2;
 }
 
 a[data-toggle="collapse"] {
@@ -451,7 +451,7 @@ ul.btn li:last-child {
 
 .login_btn a:hover {
      color: #fff !important;
-     background: #0808ff;
+     background: #42a4c2;
 }
 
 
@@ -580,7 +580,7 @@ ul.btn li:last-child {
 }
 
 .blu {
-     color: #0808ff;
+     color: #42a4c2;
 }
 
 .read_more {
@@ -598,7 +598,7 @@ ul.btn li:last-child {
 }
 
 .read_more:hover {
-     background: #0808ff;
+     background: #42a4c2;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -664,7 +664,7 @@ ul.btn li:last-child {
 }
 
 .blu2 {
-     color: #3a3aff;
+     color: #42a4c2;
      font-weight: bold;
 }
 
@@ -727,7 +727,7 @@ ul.btn li:last-child {
 
 .test_box {
      padding: 40px 25px;
-     background: #0808ff;
+     background: #42a4c2;
 }
 
 .review_Carousel .test_box h4 {
@@ -771,7 +771,7 @@ ul.btn li:last-child {
 }
 
 .review_Carousel .carousel-indicators li.active {
-     background: #0808ff;
+     background: #42a4c2;
 }
 
 .carousel-control-next-icon,
@@ -820,7 +820,7 @@ ul.location_icon li a {
 }
 
 ul.location_icon li a:hover {
-     color: #0808ff;
+     color: #42a4c2;
 }
 
 .main_form {
@@ -867,7 +867,7 @@ ul.location_icon li a:hover {
 }
 
 .main_form .send_btn:hover {
-     background-color: #0808ff;
+     background-color: #42a4c2;
      transition: ease-in all 0.5s;
      color: #fff;
 }
@@ -898,7 +898,7 @@ ul.social_icon li a {
 }
 
 ul.social_icon li a:hover {
-     background-color: #0808ff;
+     background-color: #42a4c2;
      color: #fff;
 }
 
@@ -941,7 +941,7 @@ ul.social_icon li a:hover {
 .sub_btn {
      font-size: 17px;
      transition: ease-in all 0.5s;
-     background-color: #0808ff;
+     background-color: #42a4c2;
      color: #fff;
      padding: 11px 0px;
      max-width: 200px;
@@ -977,7 +977,7 @@ ul.social_icon li a:hover {
 }
 
 .copyright a:hover {
-     color: #0808ff;
+     color: #42a4c2;
 }
 
 
