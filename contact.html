@@ -89,22 +89,22 @@ fetch("./footer.html")
         <h1>Formulario de contacto</h1>
         <form name="contactForm" method="post" onsubmit = "return validate()" action="#">
           <label for="name">*Nombre</label>
-          <input type="text" id="name" name="name" placeholder="Your name" >
+          <input type="text" id="name" name="name" placeholder="Nombre" >
           <span class="errors"></span>
       
       
           <label for="email">* Email</label>
-          <input type="text" placeholder="Email address" id="email" name="email" >
+          <input type="text" placeholder="Email" id="email" name="email" >
           <span class="errors"></span>
       
       
           <label for="phone">* Teléfono</label>
-          <input type="text" placeholder="Phone number" id="phone" name="phone" >
+          <input type="text" placeholder="Teléfono" id="phone" name="phone" >
           <span class="errors"></span>
       
           
           <label for="subject">* Mensaje</label>
-          <textarea placeholder="Your message" cols="132" rows="5" name="subject" id="subject"></textarea>
+          <textarea placeholder="Mensaje" cols="132" rows="5" name="subject" id="subject"></textarea>
           <span class="errors"></span>
       
       
@@ -130,12 +130,12 @@ fetch("./footer.html")
               removeSpan = fields[i].nextElementSibling;
               par = fields[i].parentNode;
               par.removeChild(removeSpan);
-              fields[i].nextElementSibling.innerHTML = "Hmmm! " + fields[i].placeholder + " is required?";
+              fields[i].nextElementSibling.innerHTML = "Hmmm! " + fields[i].placeholder + " es requerido";
               fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
               check = false;
               errArr.push(fields[i]);
             }
-            fields[i].nextElementSibling.innerHTML = "Hmmm! " + fields[i].placeholder + " is required?";
+            fields[i].nextElementSibling.innerHTML = "Hmmm! " + fields[i].placeholder + " requerido";
             fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
             check = false;
             errArr.push(fields[i]);
