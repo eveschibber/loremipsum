@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>LoremIpsum Movies</title>
-   <link rel="stylesheet" href="style/homepage.css">
-   <link rel="stylesheet" href="style/fonts.css">
-
-</head>
-
-<body>
-
    <!-- Navigation links -->
-   <nav>
-      <ul>
-         <li><a href="#">movies</a></li>
-         <li><a href="#">tv shows</a></li>
-         <li><a id="aboutLink">about</a></li>
-      </ul>
-   </nav>
+   <header>
+
+      <script> 
+      fetch("header.html")
+        .then(response => {
+          return response.text()
+        })
+        .then(data => {
+          document.querySelector("header").innerHTML = data;
+        });
+      
+      fetch("./footer.html")
+        .then(response => {
+          return response.text()
+        })
+        .then(data => {
+          document.querySelector("footer").innerHTML = data;
+        });
+      </script>
+      
+      </header>
+   <body>
 
    <!-- Title section -->
    <section class="title">
@@ -40,7 +43,7 @@
    <!-- Popular TV Shows section -->
    <section class="popularTvShows popular">
       <h2 class="popularTitle">SERIES DE TV <span><i class="material-icons hot">whatshot</i></span></h2>
-      <a href="#">see more...</a>
+      <a href="#">ver más...</a>
       <!-- TV Shows output -->
       <div id="tvShows" class="scroll"></div>
    </section>
@@ -67,7 +70,7 @@
 
    <!-- About section -->
    <section class="about" id="aboutSection">
-      <h1>ABOUT</h1>
+      <h1>CONTACTO</h1>
       <p>This website uses <a href="https://themoviedb.org">themoviedb.org</a> API to help you find movies & tv shows to
          watch, with ease. You can: </p>
       <div class="about_boxes">
