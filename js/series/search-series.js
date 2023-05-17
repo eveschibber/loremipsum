@@ -37,17 +37,17 @@ form.addEventListener("submit", (e)=>{
     if(genresObject[input.trim().toUpperCase(input)]){
         pageNum = 1;
         const id = genresObject[input.trim().toUpperCase(input)];
-        searchedFor.innerHTML = "Genre: " + "<span>" +input+ "</span>";
+        searchedFor.innerHTML = "Genero: " + "<span>" +input+ "</span>";
         genres(id);
     } else if (isNaN(input)){
         // IF THE INPUT VALUE IS A STRING:
         pageNum = 1;
-        searchedFor.innerHTML = "Title: " +"<span>" +input+ "</span>"
+        searchedFor.innerHTML = "Titulo: " +"<span>" +input+ "</span>"
         showByTitle(input);
     } else {
         // IF THE INPUT VALUE IS A NUMBER:
         pageNum = 1;
-        searchedFor.innerHTML = "Year: " +"<span>" +input+ "</span>"
+        searchedFor.innerHTML = "Año: " +"<span>" +input+ "</span>"
         showsByYear(input);
     }
 
@@ -81,7 +81,7 @@ function genres(id){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -99,7 +99,7 @@ function genres(id){
                         <h2>${series[i].name}</h2>
                             <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                             <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                            <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                            <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                     </div>
                     </div>
                     <div class="card_img">
@@ -146,7 +146,7 @@ function showByTitle(input){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -164,7 +164,7 @@ function showByTitle(input){
                         <h2>${series[i].name}</h2>
                             <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                             <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                            <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                            <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                     </div>
                     </div>
                     <div class="card_img">
@@ -214,7 +214,7 @@ function showsByYear(year){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -232,7 +232,7 @@ function showsByYear(year){
                         <h2>${series[i].name}</h2>
                             <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                             <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                            <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                            <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                     </div>
                     </div>
                     <div class="card_img">
@@ -279,7 +279,7 @@ function showsByYear(year){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -297,7 +297,7 @@ function showsByYear(year){
                                     <h2>${series[i].name}</h2>
                                         <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                                         <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                                        <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                                        <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                                 </div>
                                 </div>
                                 <div class="card_img">
@@ -386,7 +386,7 @@ function showsByGenrePage(pageNum){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -404,7 +404,7 @@ function showsByGenrePage(pageNum){
                         <h2>${series[i].name}</h2>
                             <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                             <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                            <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                            <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                     </div>
                     </div>
                     <div class="card_img">
@@ -449,7 +449,7 @@ function showsByTitlePage(pageNum){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -467,7 +467,7 @@ function showsByTitlePage(pageNum){
                         <h2>${series[i].name}</h2>
                             <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                             <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                            <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                            <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                     </div>
                     </div>
                     <div class="card_img">
@@ -516,7 +516,7 @@ function showsByYearPage(pageNum){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -534,7 +534,7 @@ function showsByYearPage(pageNum){
                         <h2>${series[i].name}</h2>
                             <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                             <p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                            <a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+                            <a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
                     </div>
                     </div>
                     <div class="card_img">
@@ -562,7 +562,7 @@ function showsByYearPage(pageNum){
 //Takes the user to detailed tv show info page.
 function showSelected(id){
     sessionStorage.setItem("showId", id);
-    window.open("../shows-page.html");
+    window.open("../series.html");
     return false;
 }
 
@@ -575,7 +575,7 @@ function addToList(id){
         
 		//Notification that it will be added to Watchlist.
         const added = document.getElementById("added");
-        added.innerHTML = "Added to watchlist !"
+        added.innerHTML = "Agregado a Watchlist !"
         added.classList.add("added");
         setTimeout(() => {
             added.classList.remove("added");
@@ -583,7 +583,7 @@ function addToList(id){
 	} else {
 		//Notification that it has already been added to the watchlist.
         const alreadyStored = document.getElementById("alreadyStored");
-        alreadyStored.innerHTML = "Already in watchlist !"
+        alreadyStored.innerHTML = "Ya cargado en Watchlist !"
         alreadyStored.classList.add("alreadyStored");
         setTimeout(() => {
             alreadyStored.classList.remove("alreadyStored");

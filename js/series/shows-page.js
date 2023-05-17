@@ -62,9 +62,9 @@ function getShowInfo(){
 
 						<div class="buttons">
 							<a href="https://www.imdb.com/title/${imdb_id}"target="_blank"> IMDB Link </a>
-							<a id="addToWatchList" onclick="addToList('${movie.id}')"> Add to watchlist </a>
+							<a id="addToWatchList" onclick="addToList('${movie.id}')"> Agregar a watchlist </a>
 							<a class="twitter-share-button twitter" onclick="tweet('${series.name}')"></a>
-							<a onclick="goBack()"> Go back </a>
+							<a onclick="goBack()"> Volver </a>
 						</div>
 					</div>
 				</div>
@@ -81,8 +81,8 @@ function getShowInfo(){
 		// If there is an error, it logs the error in the console.
 		.catch ((err)=>{
 			let output = "";
-			output += `<h1 id="errorTitle">SORRY !</h1>
-			<p id="errorText">We could not provide informations about this tv show at this particular moment. Be sure to come back again. Thank you for your understanding. </p>
+			output += `<h1 id="errorTitle">PERDÓN !</h1>
+			<p id="errorText">No pudimos encontrar información sobre esta serie en este momento. Asegúrate de volver de nuevo. Gracias por tu comprensión.</p>
 			<div class="buttons errorBack">
 				<a onclick="goBack()"> Go back </a>
 			</div>`;
@@ -148,9 +148,9 @@ function getShowInfo(){
 
 						<div class="buttons">
 							<a href="https://www.imdb.com/title/${imdb_id}"target="_blank"> IMDB Link </a>
-							<a id="addToWatchList" onclick="addToList('${series.id}')"> Add to watchlist </a>
+							<a id="addToWatchList" onclick="addToList('${series.id}')"> Agregar a watchlist </a>
 							<a class="twitter-share-button twitter" onclick="tweet('${series.name}')"></a>
-							<a onclick="goBack()"> Go back </a>
+							
 						</div>
 					</div>
 				</div>
@@ -166,8 +166,8 @@ function getShowInfo(){
 		.catch ((err)=>{
 			console.log(err);
 			let output = "";
-			output += `<h1 id="errorTitle">SORRY !</h1>
-			<p id="errorText">We could not provide informations about this tv show at this particular moment. Be sure to come back again. Thank you for your understanding. </p>
+			output += `<h1 id="errorTitle">PERDÓN !</h1>
+			<p id="errorText">No pudimos encontrar información sobre esta serie en este momento. Asegúrate de volver de nuevo. Gracias por tu comprensión.</p>
 			<div class="buttons errorBack">
 				<a onclick="goBack()"> Go back </a>
 			</div>`;
@@ -228,7 +228,7 @@ function getShowInfo(){
 						<h2>${series[i].name}</h2>
 						<p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 						<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-						<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+						<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 					 </div>
 					</div>
 					<div class="card_img">
@@ -264,7 +264,7 @@ function goBack(){
 // Detailed tv shows page.
 function showSelected(id){
 	sessionStorage.setItem("showId", id);
-	location.replace("shows-page.html");
+	location.replace("series.html");
 	return false;
 }
 
@@ -301,7 +301,7 @@ function recommendedPage(pageNum){
 						<h2>${series[i].name}</h2>
 						<p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 						<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-						<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+						<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 					 </div>
 					</div>
 					<div class="card_img">
@@ -331,7 +331,7 @@ function recommendedPage(pageNum){
 			})
 }
 
-// Add to watchlist.
+// Agregar a watchlist.
 function addToList(id){
 	let storedId = JSON.parse(localStorage.getItem("series")) || [];
 	if(storedId.indexOf(id) === -1){

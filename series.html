@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Series | LoremIpsum</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/detailsPage.css">
+	<link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+	<nav class="shadowMenu">
+			<div class="logo">
+					<a href="index.html"><h3>Lorem<span><img src="images/glasses.svg" width="25px" alt="Glasses"></span>Something</h3></a>
+			</div>
+            <!-- The Menu -->
+            <div class="menu">
+					<ul>
+						<li class="list"><a href="movies/latest-movies.html">Peliculas</a></li>
+						<li class="list"><a href="series/series-latest.html">Series</a></li>
+						<li class="list"><a href="watchlist.html">Watchlist</a></li>
+						<li class="list"><a href="contact.html" id="aboutLink">Contacto</a></li>
+						</ul>
+				</div>
+		<!-- The burger menu for small screens -->
+		<div class="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<!-- Slide menu for small screens -->
+		<div class="slide">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li id="smallScreenMovies">Peliculas<span><i class="ion-chevron-down"></i></span>
+					<ul id="moviesDropdown">
+						<li><a href="movies/search-movies.html">Buscar peliculas</a></li>
+						<li><a href="movies/top-rated.html">Mejor calificadas</a></li>
+						<li><a href="movies/popular-movies.html">Populares</a></li>
+						<li><a href="movies/latest-movies.html">Últimos estrenos</a></li>
+					</ul>
+				</li>
+				<li id="smallScreenSeries">Series<span><i class="ion-chevron-down"></i></span>
+					<ul id="seriesDropdown">
+						<li><a href="series/search-series.html">Buscar series</a></li>
+						<li><a href="series/series-popular.html">Populares</a></li>
+						<li><a href="series/series-toprated.html">Mejor calificadas</a></li>
+                        <li><a href="series/series-latest.html">Al aire</a></li>
+					</ul>
+				</li>
+				<li class="list" id="smallScreenList">Mi Lista<span class="drop"><i class="ion-chevron-down"></i></span></a>
+					<ul id="myListsDropdown">
+					   <li><a href="watchlist.html">Watchlist</a>
+					</ul>
+					</li>
+				<li class="list"><a href="contact.html" id="aboutLink">Contacto</a></li>
+			</ul>
+		</div>
+	</nav>
+<!-- Spinner -->
+<div class="spinner"></div>
+<!-- Container that will showcase the info, links, trailer, recommended list -->
+<div class="container">
+	<!-- Notifications -->
+	<div class="notification" id="added"> Agregado a Watchlist !</div>
+	<div class="notification" id="alreadyStored"> Ya cargado en Watchlist !</div>
+	<div id="movie"></div>
+	<h2 id="trailer_title">Trailer</h2>
+	<div id="trailer"></div>
+	<div id="rec_title">
+		<h1>RECOMENDACIONES</h1>
+		<p>Aquí hay algunas películas similares a esta:</p>
+	</div>
+	<div id="recommended"></div>
+	<div class="page">
+		<button id="prev" title="Previous page">ATRAS</button>
+		<button id="next" title="Next page">SIGUIENTE</button>
+	</div>
+	<div id="overlay" class="overlay"></div>
+</div>
+<!-- Smooth scroll to top button -->
+<button id="scrollToTop"><i class="material-icons upArrow">expand_less</i></button>
+
+<!-- Script links -->
+<script src="js/config.js"></script>
+<script src="js/global.js"></script>
+<script src="js/series/shows-page.js"></script>
+<!-- Axios link -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+	getShowInfo();
+</script>
+</body>
+</html>

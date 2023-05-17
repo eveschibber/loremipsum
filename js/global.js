@@ -87,7 +87,7 @@ document.body.addEventListener("keydown", (e)=>{
 	}
 })
 
-// Random movie / Random TV Show
+// Random movie / Random
 const randomMovie = document.querySelector("#randomMovie");
 const randomContainer = document.querySelector(".randomContainer");
 // If randomMovie element exsists..
@@ -140,7 +140,7 @@ function getRandomMovie(){
 					<div class="smallMovie_info">
 						<p id="p_rating"><strong>Rating:</strong> <span>${movie.vote_average} / 10</span> </p>
 						<p><strong>Release date:</strong> <span>${movie.release_date}</span></p>
-						<a onclick="movieSelected('${movie.id}')" href="#">Details</a>
+						<a onclick="movieSelected('${movie.id}')" href="#">Detalles</a>
 						<a class="reloadRandom" href="#" onclick="reloadRandomMovie()"><i class="material-icons">autorenew</i></a>
 						<div class="closeSmallCard"><i class="material-icons">close</i></div>
 					</div>
@@ -154,20 +154,20 @@ function getRandomMovie(){
 // Details page for the random movie / tv show.
 function movieSelected(id){
 	sessionStorage.setItem("movieId", id);
-	window.open("../movie-page.html");
+	window.open("../peliculas.html");
 	return false;
 }
 // Get another random movie.
 function reloadRandomMovie(){
 	getRandomMovie();
 }
-// Random movie / Random TV Show
+// Random movie / Random
 const randomTvShow = document.querySelector("#randomTvShow");
 
 // If randomTvShow element exsist..
 if(randomTvShow) {
 	randomTvShow.addEventListener("click", ()=>{
-	// Run random tv show function.
+	// Run Random function.
 	getRandomTvShow();
 	})
 }
@@ -214,7 +214,7 @@ function getRandomTvShow(){
 					<div class="smallMovie_info">
 						<p id="p_rating"><strong>Rating:</strong> <span>${show.vote_average} / 10</span> </p>
 						<p><strong>Release date:</strong> <span>${show.first_air_date}</span></p>
-						<a onclick="showSelected('${show.id}')" href="#">Details</a>
+						<a onclick="showSelected('${show.id}')" href="#">Detalles</a>
 						<a class="reloadRandom" href="#" onclick="reloadRandomTvShow()"><i class="material-icons">autorenew</i></a>
 						<div class="closeSmallCard"><i class="material-icons">close</i></div>
 					</div>
@@ -229,11 +229,11 @@ function getRandomTvShow(){
 // Go to detailed info page for the tv show.
 function showSelected(id) {
 	sessionStorage.setItem("showId", id);
-	window.open("../shows-page.html");
+	window.open("../series.html");
 	return false;
 }
 
-// Get another random tv show.
+// Get another Random.
 function reloadRandomTvShow(){
 	getRandomTvShow();
 }
