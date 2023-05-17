@@ -40,7 +40,7 @@ window.onload = function getSeries(){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -58,7 +58,7 @@ window.onload = function getSeries(){
 						<h2>${series[i].name}</h2>
 							<p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 							<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-							<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+							<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 					</div>
 					</div>
 					<div class="card_img">
@@ -91,7 +91,7 @@ window.onload = function getSeries(){
 //Takes user to detailed tv show info page.
 function showSelected(id){
 	sessionStorage.setItem("showId", id);
-	window.open("../shows-page.html");
+	window.open("../series.html");
 	return false;
 }
 
@@ -134,7 +134,7 @@ function search(pageNum){
 							<h2>${series[i].name}</h2>
                                 <p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+								<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -152,7 +152,7 @@ function search(pageNum){
 						<h2>${series[i].name}</h2>
 							<p id="p_rating"><strong>Rating:</strong> <span>${series[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 							<p><strong>First air date:</strong> <span>${series[i].first_air_date} <i class="material-icons date">date_range</i> </span></p>
-							<a onclick="showSelected('${series[i].id}')" href="#">Details</a>
+							<a onclick="showSelected('${series[i].id}')" href="#">Detalles</a>
 					</div>
 					</div>
 					<div class="card_img">
@@ -190,7 +190,7 @@ function addToList(id){
 
 		//Notification that it will be added to Watchlist.
         const added = document.getElementById("added");
-        added.innerHTML = "Added to watchlist !"
+        added.innerHTML = "Agregado a Watchlist !"
         added.classList.add("added");
         setTimeout(() => {
             added.classList.remove("added");
@@ -198,7 +198,7 @@ function addToList(id){
 	} else {
 		//Notification that it has already been added to the watchlist.
         const alreadyStored = document.getElementById("alreadyStored");
-        alreadyStored.innerHTML = "Already in watchlist !"
+        alreadyStored.innerHTML = "Ya cargado en Watchlist !"
         alreadyStored.classList.add("alreadyStored");
         setTimeout(() => {
             alreadyStored.classList.remove("alreadyStored");

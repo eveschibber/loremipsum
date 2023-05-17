@@ -24,7 +24,7 @@ window.onload = function displayWatchlist(){
                  <h2>${movie.title}</h2>
                  <p id="p_rating"><strong>Rating:</strong> <span>${movie.vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                  <p><strong>First air date:</strong> <span>${movie.release_date} <i class="material-icons date">date_range</i> </span></p>
-                 <a onclick="movieSelected('${movie.id}')" href="#">Details</a>
+                 <a onclick="movieSelected('${movie.id}')" href="#">Detalles</a>
               </div>
              </div>
              <div class="card_img">
@@ -38,7 +38,7 @@ window.onload = function displayWatchlist(){
     if(toWatch.length == 0) {
         // SHOW A MESSAGE IF THERE ARE NO MOVIES IN THE LIST.
         movieOutput.innerHTML +=
-        `<p class="infoText"> There are no movies in the watchlist. Add some now. <a href="#" onclick="openRecommendMoviesBox()"> Here are some recommendations !</a> </p>`;
+        `<p class="infoText"> No hay peliculas en tu watchlist. Agrega algunas ahora. <a href="#" onclick="openRecommendMoviesBox()"> Aqui algunas recomendaciones!</a> </p>`;
     }
     // TV SHOWS
     let toWatchTvShows = JSON.parse(localStorage.getItem("series")) || [];
@@ -54,7 +54,7 @@ window.onload = function displayWatchlist(){
                     <h2>${series.name}</h2>
                     <p id="p_rating"><strong>Rating:</strong> <span>${series.vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
                     <p><strong>First air date:</strong> <span>${series.first_air_date} <i class="material-icons date">date_range</i> </span></p>
-                    <a onclick="showSelected('${series.id}')" href="#">Details</a>
+                    <a onclick="showSelected('${series.id}')" href="#">Detalles</a>
                  </div>
                 </div>
                 <div class="card_img">
@@ -68,13 +68,13 @@ window.onload = function displayWatchlist(){
     if(toWatchTvShows == 0){
         // SHOW A MESSAGE IF THERE ARE NO MOVIES IN THE LIST.
         tvShowsOutput.innerHTML +=
-        `<p class="infoText"> There are no tv shows in the watchlist. Add some now. <a href="#" onclick="openRecommendTvShowsBox()"> Here are some recommendations !</a> </p>`;
+        `<p class="infoText"> No hay series en tu watchlist. Agrega algunas ahora. <a href="#" onclick="openRecommendTvShowsBox()"> Aqui algunas recomendaciones!</a> </p>`;
     }
 }
 // Recommend movies
 const recommendedBox = document.querySelector(".recommendedBox");
 function openRecommendMoviesBox(){
-    document.getElementById("recommendedTitle").innerHTML = `Recommended Movies: <span class="reload"><i class="material-icons refresh" onclick="reloadRecommendedMovies()">autorenew</i></span>`;
+    document.getElementById("recommendedTitle").innerHTML = `Peliculas recomendadas: <span class="reload"><i class="material-icons refresh" onclick="reloadRecommendedMovies()">autorenew</i></span>`;
     recommendedBox.classList.add("recommendedBoxActive");    
     recommendMovies();
 }
@@ -121,7 +121,7 @@ function recommendMovies(){
 }
 // Recommend tv shows.
 function openRecommendTvShowsBox(){
-    document.getElementById("recommendedTitle").innerHTML = `Recommended TV Shows: <span class="reload"><i class="material-icons refresh" onclick="reloadRecommendedTvShows()">autorenew</i></span>`;
+    document.getElementById("recommendedTitle").innerHTML = `Series recomendadas: <span class="reload"><i class="material-icons refresh" onclick="reloadRecommendedTvShows()">autorenew</i></span>`;
     recommendedBox.classList.add("recommendedBoxActive");
     recommendTvShows();
 }
@@ -182,7 +182,7 @@ function movieSplice(id){
         
         //Notification that a movie was removed from watchlist.
         const removedWatchlist = document.getElementById("alreadyStored");
-        removedWatchlist.innerHTML = "Removed from watchlist !";
+        removedWatchlist.innerHTML = "Eliminado de tu watchlist !";
         removedWatchlist.classList.add("alreadyStored");
         setTimeout(() => {
             added.classList.remove("alreadyStored");
@@ -199,7 +199,7 @@ function seriesSplice(id){
 
     //Notification that a tv shows was removed from watchlist.
     const removedWatchlist = document.getElementById("alreadyStored");
-    removedWatchlist.innerHTML = "Removed from watchlist !";
+    removedWatchlist.innerHTML = "Eliminado de tu watchlist !";
     removedWatchlist.classList.add("alreadyStored");
     setTimeout(() => {
         added.classList.remove("alreadyStored");
@@ -210,13 +210,13 @@ function seriesSplice(id){
 //Takes you to detailed movie info page.
 function movieSelected(id){
     sessionStorage.setItem("movieId",id);
-    window.open("movie-page.html");
+    window.open("peliculas.html");
     return false;
 }
 // Takes you to detailed tv show info page.
 function showSelected(id){
     sessionStorage.setItem("showId", id);
-    window.open("shows-page.html");
+    window.open("series.html");
     return false;
 }
 

@@ -41,7 +41,7 @@ window.onload = function getMovies(){
 							<h2>${movie[i].title}</h2>
 								<p id="p_rating"><strong>Rating:</strong> <span>${movie[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>Release date:</strong> <span>${movie[i].release_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="movieSelected('${movie[i].id}')" href="#">Details</a>
+								<a onclick="movieSelected('${movie[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -58,7 +58,7 @@ window.onload = function getMovies(){
 						<h2>${movie[i].title}</h2>
 							<p id="p_rating"><strong>Rating:</strong> <span>${movie[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 							<p><strong>Release date:</strong> <span>${movie[i].release_date} <i class="material-icons date">date_range</i> </span></p>
-							<a onclick="movieSelected('${movie[i].id}')" href="#">Details</a>
+							<a onclick="movieSelected('${movie[i].id}')" href="#">Detalles</a>
 					</div>
 					</div>
 					<div class="card_img">
@@ -92,7 +92,7 @@ window.onload = function getMovies(){
 //Takes the user to detailed info page.
 function movieSelected(id){
 	sessionStorage.setItem("movieId", id);
-	window.open("../movie-page.html");
+	window.open("../peliculas.html");
 	return false;
 }
 
@@ -135,7 +135,7 @@ function search(pageNum){
 							<h2>${movie[i].title}</h2>
 								<p id="p_rating"><strong>Rating:</strong> <span>${movie[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>Release date:</strong> <span>${movie[i].release_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="movieSelected('${movie[i].id}')" href="#">Details</a>
+								<a onclick="movieSelected('${movie[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -152,7 +152,7 @@ function search(pageNum){
 						<h2>${movie[i].title}</h2>
 							<p id="p_rating"><strong>Rating:</strong> <span>${movie[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 							<p><strong>Release date:</strong> <span>${movie[i].release_date} <i class="material-icons date">date_range</i> </span></p>
-							<a onclick="movieSelected('${movie[i].id}')" href="#">Details</a>
+							<a onclick="movieSelected('${movie[i].id}')" href="#">Detalles</a>
 					</div>
 					</div>
 					<div class="card_img">
@@ -191,7 +191,7 @@ function addToList(id){
 		localStorage.setItem("movies", JSON.stringify(storedId));
 		//Notification that it will be added to Watchlist.
         const added = document.getElementById("added");
-        added.innerHTML = "Added to watchlist !"
+        added.innerHTML = "Agregado a Watchlist !"
         added.classList.add("added");
         setTimeout(() => {
             added.classList.remove("added");
@@ -199,7 +199,7 @@ function addToList(id){
 	} else {
 		//Notification that it has already been added to the watchlist.
         const alreadyStored = document.getElementById("alreadyStored");
-        alreadyStored.innerHTML = "Already in watchlist !"
+        alreadyStored.innerHTML = "Ya cargado en Watchlist !"
         alreadyStored.classList.add("alreadyStored");
         setTimeout(() => {
             alreadyStored.classList.remove("alreadyStored");

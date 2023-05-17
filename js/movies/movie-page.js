@@ -69,9 +69,9 @@ function getMovie(){
 				</ul>
 				<div class="buttons">
 					<a href="https://www.imdb.com/title/${movie.imdb_id}" target="_blank"> IMDB Link </a>
-					<a id="addToWatchList" onclick="addToList('${movie.id}')"> Add to watchlist </a>
+					<a id="addToWatchList" onclick="addToList('${movie.id}')"> Agregar a watchlist </a>
 					<a class="twitter-share-button twitter" onclick="tweet('${movie.title}')"></a>
-					<a onclick="goBack()"> Go back </a>
+					<a onclick="goBack()"> Volver </a>
 				</div>
 			</div>
 		</div>
@@ -88,8 +88,8 @@ function getMovie(){
 		//If there is an error, show this.
 		.catch ((err)=>{
 			let output = "";
-			output += `<h1 id="errorTitle">SORRY !</h1>
-			<p id="errorText">We could not provide informations about this movie at this particular moment. Be sure to come back again. Thank you for your understanding. </p>
+			output += `<h1 id="errorTitle">PERDÓN !</h1>
+			<p id="errorText">No pudimos encontrar información sobre esta película en este momento. Asegúrate de volver de nuevo. Gracias por tu comprensión.</p>
 			<div class="buttons errorBack">
 				<a onclick="goBack()"> Go back </a>
 			</div>`;
@@ -154,7 +154,7 @@ function getMovie(){
 							<h2>${movie[i].title}</h2>
 								<p id="p_rating"><strong>Rating:</strong> <span>${movie[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 								<p><strong>Release date:</strong> <span>${movie[i].release_date} <i class="material-icons date">date_range</i> </span></p>
-								<a onclick="movieSelected('${movie[i].id}')" href="#">Details</a>
+								<a onclick="movieSelected('${movie[i].id}')" href="#">Detalles</a>
 						</div>
 						</div>
 						<div class="card_img">
@@ -191,7 +191,7 @@ function goBack(){
 // Take user to details page.
 function movieSelected(id){
 	sessionStorage.setItem("movieId", id);
-	location.replace("movie-page.html");
+	location.replace("peliculas.html");
 	return false;
 }
 
@@ -227,7 +227,7 @@ function recommendedPage(pageNum){
 						<h2>${movie[i].title}</h2>
 						<p id="p_rating"><strong>Rating:</strong> <span>${movie[i].vote_average} / 10  <i class="material-icons star">star_rate</i></span> </p>
 						<p><strong>Release date:</strong> <span>${movie[i].release_date} <i class="material-icons date">date_range</i> </span></p>
-						<a onclick="movieSelected('${movie[i].id}')" href="#">Details</a>
+						<a onclick="movieSelected('${movie[i].id}')" href="#">Detalles</a>
 					 </div>
 					</div>
 					<div class="card_img">
@@ -256,7 +256,7 @@ function recommendedPage(pageNum){
 	})
 }
 
-//Add to watchlist.
+//Agregar a watchlist.
 function addToList(id){
 	let storedId = JSON.parse(localStorage.getItem("movies")) || [];
 	if(storedId.indexOf(id) === -1){
@@ -265,7 +265,7 @@ function addToList(id){
 
 		//Notification that it will be added to Watchlist.
         const added = document.getElementById("added");
-        added.innerHTML = "Added to Watchlist!";
+        added.innerHTML = "Agregada a Watchlist !";
         added.classList.add("added");
 		setTimeout(() => {
             added.classList.remove("added");
@@ -273,7 +273,7 @@ function addToList(id){
 	} else {
 		//Notification that it has already been added to the watchlist.
 		const alreadyStored = document.getElementById("alreadyStored");
-        alreadyStored.innerHTML = "Already in Watchlist!";
+        alreadyStored.innerHTML = "Ya cargada en watchlist !";
         alreadyStored.classList.add("alreadyStored");
 		setTimeout(() => {
             alreadyStored.classList.remove("alreadyStored");

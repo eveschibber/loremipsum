@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>LoremIpsum Movies</title>
-   <link rel="stylesheet" href="style/homepage.css">
-   <link rel="stylesheet" href="style/fonts.css">
-   probando pull
-</head>
-
-<body>
-
    <!-- Navigation links -->
-   <nav>
-      <ul>
-         <li><a href="#">movies</a></li>
-         <li><a href="#">tv shows</a></li>
-         <li><a id="aboutLink">about</a></li>
-      </ul>
-   </nav>
+   <header>
+
+      <script> 
+      fetch("header.html")
+        .then(response => {
+          return response.text()
+        })
+        .then(data => {
+          document.querySelector("header").innerHTML = data;
+        });
+      
+      fetch("./footer.html")
+        .then(response => {
+          return response.text()
+        })
+        .then(data => {
+          document.querySelector("footer").innerHTML = data;
+        });
+      </script>
+      
+      </header>
+   <body>
 
    <!-- Title section -->
    <section class="title">
@@ -29,80 +32,64 @@
       <p id="quote"></p>
    </section>
 
-   <!-- Popular movies section -->
+   <!-- Populares section -->
    <section class="popularMovies popular">
-      <h2 class="popularTitle">POPULAR MOVIES <span><i class="material-icons hot">whatshot</i></span></h2>
-      <a href="#">see more...</a>
+      <h2 class="popularTitle">PELICULAS POPULARES <span><i class="material-icons hot">whatshot</i></span></h2>
+      <a href="movies/popular-movies.html">ver más...</a>
       <!-- Movies output -->
       <div id="movies" class="scroll"></div>
    </section>
 
-   <!-- Popular TV Shows section -->
+   <!-- Populares section -->
    <section class="popularTvShows popular">
-      <h2 class="popularTitle">POPULAR TV SHOWS <span><i class="material-icons hot">whatshot</i></span></h2>
-      <a href="#">see more...</a>
+      <h2 class="popularTitle">SERIES DE TV <span><i class="material-icons hot">whatshot</i></span></h2>
+      <a href="series/series-popular.html">ver más...</a>
       <!-- TV Shows output -->
       <div id="tvShows" class="scroll"></div>
    </section>
 
-   <!-- See more section -->
-   <section class="seeMore">
-      <h2>For more options, click on one of the buttons below:</h2>
-      <div class="seeMore_buttons">
-         <!-- Movies -->
-         <a href="#">MOVIES</a>
-         <!-- TV Shows -->
-         <a href="#">TV SHOWS</a>
-      </div>
-   </section>
+
 
    <!-- Now Playing section -->
    <section class="nowPlaying">
-      <h1>NOW PLAYING</h1>
-      <p id="nowPlayingText">Movies that are playing in theaters now. Find more of the latest movies <a
-            href="#">here</a>.</p>
+      <h1>Estrenos</h1>
+      <p id="nowPlayingText">Películas que están en cines <a href="movies/latest-movies.html">AQUI</a>.</p>
       <!-- Now Playing output -->
       <div id="nowPlaying" class="scroll"></div>
    </section>
 
    <!-- About section -->
-   <section class="about" id="aboutSection">
-      <h1>ABOUT</h1>
-      <p>This website uses <a href="https://themoviedb.org">themoviedb.org</a> API to help you find movies & tv shows to
-         watch, with ease. You can: </p>
+   <section class="about" id="aboutSection">  
+     
       <div class="about_boxes">
          <!-- Movies box -->
          <div class="moviesBox box">
-            <h3>MOVIES</h3>
-            <p>Look trough our lists of top rated, popular, latest & upcoming movies, to find something good to watch.
-               Search by year, title, actor or genre.</p>
+            <h3>PELICULAS</h3>
+            <p>Buscá las películas mejor rankeadas, las más nuevas, los estrenos. Buscá por año, título, actores o género</p>
             <div class="boxImg">
                <i class="material-icons boxIcon">theaters</i>
             </div>
          </div>
          <!-- TV SHOWS box -->
          <div class="tvShowsBox box">
-            <h3>TV SHOWS</h3>
-            <p>Top rated, popular, on air... whatever you need. You can also search for tv shows by year, title or
-               genre.</p>
+            <h3>SERIES DE TV</h3>
+            <p>Las mejor puntudadas, populares, al aire... lo que busques! Podés buscar por año, título o género</p>
             <div class="boxImg">
                <i class="material-icons boxIcon">tv</i>
             </div>
          </div>
          <!-- Lists box -->
          <div class="listsBox box">
-            <h3>LISTS</h3>
-            <p>Add movies & tv shows to a watchlist and favorites list, so you can keep track of what you need to watch
-               or what you loved ! Or maybe get help with some recommendations.</p>
+            <h3>LISTAS</h3>
+            <p>Armá tus listas personalidas de series o películas favoritas.</p>
             <div class="boxImg">
                <i class="material-icons boxIcon">visibility</i>
             </div>
          </div>
          <!-- Details box -->
          <div class="detailsBox box">
-            <h3>DETAILS</h3>
-            <p>Get detailed informations about every movie or tv show, including trailers & recommendations for similar
-               movies / tv shows.</p>
+            <h3>SEGUINOS</h3>
+            <p>Podés seguirnos en nuestras redes sociales para enterarte de los últimos lanzamientos, novedades y más!</p>
             <div class="boxImg">
                <i class="material-icons boxIcon">description</i>
             </div>
@@ -118,49 +105,12 @@
 
    <!-- Footer -->
    <footer>
-      <!-- Links -->
-      <div class="links">
-         <div class="moviesLinks">
-            <h3>MOVIES</h3>
-            <ul>
-               <li><a href="movies/top-rated.html">Top Rated</a></li>
-               <li><a href="movies/popular-movies.html">Popular</a></li>
-               <li><a href="movies/latest-movies.html">Latest</a></li>
-               <li><a href="movies/search-movies.html">Search</a></li>
-            </ul>
-         </div>
-         <!-- Tv Shows page links -->
-         <div class="tvShowsLinks">
-            <h3>TV SHOWS</h3>
-            <ul>
-               <li><a href="series/series-toprated.html">Top Rated</a></li>
-               <li><a href="series/series-popular.html">Popular</a></li>
-               <li><a href="series/series-latest.html">On Air</a></li>
-               <li><a href="series/search-series.html">Search</a></li>
-            </ul>
-         </div>
-         <!-- GitHub link -->
-         <div class="githubLink">
-            <h3>&copy; 2023</h3>
-            <p>GitHub link: </p>
-            <a href="#" target="somethingUnique"><img src="images/github.svg"
-                  width="32px" alt="GitHub"></a>
-         </div>
-      </div>
-      <!-- Deadpool image -->
-      <div class="deadpool">
-         <img src="images/deadpool.png" width="330px" alt="Deadpool...">
-      </div>
-      <!-- Credits -->
-      <div class="credits">
-         <a href="https://themoviedb.org" target="somethingUnique"><img src="images/tmdb2.svg" width="150px"
-               alt="TMDB - The movie database."></a>
-      </div>
+  
    </footer>
 
 </body>
-<script src="scripts/config.js"></script>
-<script src="scripts/homePage.js"></script>
+<script src="js/config.js"></script>
+<script src="js/homePage.js"></script>
 <!-- Axios link -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
