@@ -76,7 +76,7 @@ function getMovie(){
 			</div>
 		</div>
 		<div class="plot">
-			<h3>Plot</h3>
+			<h3>Trama</h3>
 			<p>${movie.overview}</p>
 		</div>`;
 
